@@ -10,6 +10,14 @@
     "wordpress",
     "theme"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:youngershen/justcoder.git"
+  },
   "author": "younger shen",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "materialize-css": "^0.100.2"
+  }
 }
