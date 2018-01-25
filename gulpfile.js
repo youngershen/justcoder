@@ -27,7 +27,7 @@ gulp.task('build_materialize', function(){
 
 });
 
-gulp.task('buildcss', function() {
+gulp.task('build_css', function() {
 
     gulp.src('static/css/*.css')
         .pipe(concat('bundle.min.css'))
@@ -38,7 +38,7 @@ gulp.task('buildcss', function() {
         .pipe(gulp.dest('static/css'));
 });
 
-gulp.task('buildjs', function(){
+gulp.task('build_js', function(){
     gulp.src('static/js/*.js')
         .pipe(concat('bundle.min.js'))
         .pipe(jsugify())
@@ -48,4 +48,4 @@ gulp.task('buildjs', function(){
         .pipe(gulp.dest('static/js'));
 });
 
-gulp.task('default', ['build_materialize', 'buildcss', 'buildjs']);
+gulp.task('default', ['build_materialize', 'build_css', 'build_js']);
