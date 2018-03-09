@@ -1,11 +1,14 @@
 /**
- * PROJECT : justcoder
- * FILE :
- * DATE : 2018/1/25 16:27
- * AUTHOR : Younger Shen <younger.shen@hotmail.com>
+ * PROJECT : blog
+ * FILE    : ff.php
+ * AUTHOR  : Younger Shen
+ * EMAIL   : younger.shen@hotmail.com
+ * CELL    : 13811754531
+ * TIME    : 2018/3/9 14:42
  */
 
-var fuck = function()
+
+function version()
 {
-    console.log('sf');
-};
+    return 'v1.0'
+}
