@@ -12,41 +12,20 @@ var concat = require('gulp-concat');
 var replace = require('gulp-replace');
 var rev = require('gulp-rev');
 
-var materialize_path = 'node_modules/materialize-css';
 
+gulp.task('build_css', function() {
 
-gulp.task('build_materialize', function(){
-    gulp.src(materialize_path + '/dist/css/materialize.css')
-        .pipe(gulp.dest('static/css'));
-
-    gulp.src(materialize_path + '/dist/fonts/roboto/*')
-        .pipe(gulp.dest('static/fonts/roboto'));
-
-    var stream = gulp.src(materialize_path + '/dist/js/materialize.js')
-        .pipe(gulp.dest('static/js'));
-
-    return stream;
-});
-
-gulp.task('build_css', ['build_materialize'], function() {
-
-    gulp.src('static/css/*.css')
+    gulp.src(['static/css/justcoder.css', 'static/bootstrap-4.0.0-dist/css/bootstrap.min.css'])
         .pipe(concat('bundle.min.css'))
         .pipe(cssminify())
-        // .pipe(rev())
         .pipe(gulp.dest('static/css'))
-        // .pipe(rev.manifest('css-manifest.json'))
-        // .pipe(gulp.dest('static/css'));
 });
 
-gulp.task('build_js', ['build_materialize'], function(){
-    gulp.src('static/js/*.js')
+gulp.task('build_js', function(){
+    gulp.src(['static/jquery/jquery-3.3.1.min.js', 'static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js', 'static/js/justcoder.js'])
         .pipe(concat('bundle.min.js'))
         .pipe(jsugify())
-        // .pipe(rev())
         .pipe(gulp.dest('static/js'))
-        // .pipe(rev.manifest('js-manifest.json'))
-        // .pipe(gulp.dest('static/js'));
 });
 
-gulp.task('default', ['build_materialize', 'build_css', 'build_js']);
+gulp.task('default', ['build_css', 'build_js']);

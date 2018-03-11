@@ -1,14 +1,13 @@
 /**
  * PROJECT : blog
- * FILE    : ff.php
+ * FILE    :
  * AUTHOR  : Younger Shen
  * EMAIL   : younger.shen@hotmail.com
  * CELL    : 13811754531
- * TIME    : 2018/3/9 14:42
+ * TIME    : 2018/3/11 21:29
  */
 
-
-function version()
+function fuck()
 {
-    return 'v1.0'
+    return 'fuck';
 }
