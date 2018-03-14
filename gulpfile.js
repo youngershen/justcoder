@@ -15,7 +15,7 @@ var rev = require('gulp-rev');
 
 gulp.task('build_css', function() {
 
-    gulp.src(['static/css/justcoder.css', 'static/bootstrap-4.0.0-dist/css/bootstrap.min.css'])
+    gulp.src(['static/bootstrap-4.0.0-dist/css/bootstrap.min.css', 'static/css/justcoder.css'])
         .pipe(concat('bundle.min.css'))
         .pipe(cssminify())
         .pipe(gulp.dest('static/css'))
